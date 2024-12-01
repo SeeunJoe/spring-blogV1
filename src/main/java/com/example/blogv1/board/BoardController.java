@@ -15,7 +15,7 @@ public class BoardController {
 
     @GetMapping("/")
     public String list(Model model){ //DS(request객체를 model이라는 개게로 랩핑해서 전달해준다)
-        List<Board> boardList = boardService.게시글목록보기();
+        List<BoardResponse.DTO> boardList = boardService.게시글목록보기();
         model.addAttribute("models",boardList);
         return "list";
     }
